@@ -12,14 +12,12 @@ h1 {
 
 .side {
     display: flex;
-    border: 2px solid red;
 }
 
 .left, .right {
     flex: auto;
     flex-direction: column;
     flex-shrink: 1;
-    border: 2px solid blue;
 }
 
 .middle {
@@ -29,7 +27,6 @@ h1 {
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
-    border: 2px solid gold;
 }
 
 .square {

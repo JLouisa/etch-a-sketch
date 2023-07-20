@@ -6,8 +6,8 @@ const body = document.querySelector('body');
 const web = document.querySelector('.web');
 const btn = document.createElement('button');
     btn.classList.add('resize');
-    btn.textContent = "Grid Size";
-    btn.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 40px;');
+    btn.textContent = "Grid Resize";
+    btn.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 35px;');
     body.insertBefore(btn, web);
 
 let grid = 16;
@@ -37,8 +37,8 @@ test.forEach(square => square.setAttribute('style', `padding: ${(800-grid)/grid}
 
 //Click Button
 btn.addEventListener('click', (grid2) => {
-    grid2 = +(prompt("What's the new size?", 75));
-    
+    grid2 = +(prompt("What length and width do you want the gird?", 16));
+
     if(grid2 > 100) {grid2 = 100};
     if(grid2 == '' || grid2 < 1) {grid2 = 16};
 
