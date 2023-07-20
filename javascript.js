@@ -81,10 +81,20 @@ test2.forEach(square => square.setAttribute('style', `padding: ${(800-grid2)/gri
 //RGB color Create hover effect
 const left2 = document.querySelectorAll('.left');
 left2.forEach(left => left.addEventListener("mouseover", (event) => {
-    event.target.style.backgroundColor = "rgb(143, 200, 143)";}
+    event.target.style.backgroundColor = `rgb(${rgb()},${rgb()}, ${rgb()})`;}
   ));
 
 const right2 = document.querySelectorAll('.right');
 right2.forEach(right =>right.addEventListener("mouseover", (event) => {
     event.target.style.backgroundColor = "rgb(200, 1, 143)";}
   ));
+
+//Random
+
+function rgb() {
+    let calcRGB = Math.random().toFixed(2)*255;
+    let calcRGB2 = calcRGB.toFixed(0);
+    return calcRGB2;
+}
+
+console.log(rgb());
