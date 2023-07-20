@@ -4,3 +4,13 @@ h1 {
     font-weight: 700;
     text-align: center;
 }
+
+.middle {
+    display: flex;
+    justify-content: center;
+}
+
+.square {
+    border: 2px solid black;
+    padding: 50px;
+}
