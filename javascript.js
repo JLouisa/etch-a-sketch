@@ -7,8 +7,8 @@ for(n = 1; n <= 16; n++) {
     container.appendChild(divs[n]);
 
         let first = [];
-        for(let i1 = 1; i1 <= 16; i1++) {
-            first[i1] = document.createElement('div');
-            first[i1].classList.add(`first${i1}`, 'square');
-            divs[n].appendChild(first[i1]);}
+        for(let i = 1; i <= 16; i++) {
+            first[i] = document.createElement('div');
+            first[i].classList.add(`first${i}`, 'square');
+            divs[n].appendChild(first[i]);}
 }
