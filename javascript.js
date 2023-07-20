@@ -75,3 +75,16 @@ const test2 = document.querySelectorAll('.square');
 test2.forEach(square => square.setAttribute('style', `padding: ${(800-grid2)/grid2}px;`));
 
 });
+
+
+
+//RGB color Create hover effect
+const left2 = document.querySelectorAll('.left');
+left2.forEach(left => left.addEventListener("mouseover", (event) => {
+    event.target.style.backgroundColor = "rgb(143, 200, 143)";}
+  ));
+
+const right2 = document.querySelectorAll('.right');
+right2.forEach(right =>right.addEventListener("mouseover", (event) => {
+    event.target.style.backgroundColor = "rgb(200, 1, 143)";}
+  ));
