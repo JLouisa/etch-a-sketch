@@ -12,7 +12,7 @@ const btn = document.createElement('button');
 
 let grid = 16;
 
-let divs = []
+let divs = [];
 for(n = 1; n <= grid; n++) {
     divs[n] = document.createElement('div');
     divs[n].classList.add(`head${n}`, 'divs');
@@ -38,6 +38,7 @@ test.forEach(square => square.setAttribute('style', `padding: ${(800-grid)/grid}
 //Click Button
 btn.addEventListener('click', (grid2) => {
     grid2 = +(prompt("What's the new size?", 75));
+
     let web = document.querySelector('.web');
         middle = document.querySelector('.middle');
         web.removeChild(middle);
@@ -47,5 +48,27 @@ btn.addEventListener('click', (grid2) => {
         web.insertBefore(middle2, right);
 
 //Create new grid
+let divs2 = [];
+for(n2 = 1; n2 <= grid2; n2++) {
+    divs2[n2] = document.createElement('div');
+    divs2[n2].classList.add(`head${n2}`, 'divs');
+    middle2.appendChild(divs2[n2]);
+
+        let square2 = [];
+        for(let i2 = 1; i2 <= grid2; i2++) {
+            square2[i2] = document.createElement('div');
+            square2[i2].classList.add(`row${n}col${i2}`, 'square');
+            divs2[n2].appendChild(square2[i2]);}
+}
+
+// Create hover effect
+const sketch2 = document.querySelectorAll('.square');
+sketch2.forEach(square => square.addEventListener("mouseover", (event) => {
+    event.target.style.backgroundColor = "green";}
+  ));
+
+// Adjust Padding for square
+const test2 = document.querySelectorAll('.square');
+test2.forEach(square => square.setAttribute('style', `padding: ${(800-grid2)/grid2}px;`));
 
 });
