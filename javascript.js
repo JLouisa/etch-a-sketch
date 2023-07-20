@@ -38,6 +38,9 @@ test.forEach(square => square.setAttribute('style', `padding: ${(800-grid)/grid}
 //Click Button
 btn.addEventListener('click', (grid2) => {
     grid2 = +(prompt("What's the new size?", 75));
+    
+    if(grid2 > 100) {grid2 = 100};
+    if(grid2 == '' || grid2 < 1) {grid2 = 16};
 
     let web = document.querySelector('.web');
         middle = document.querySelector('.middle');
