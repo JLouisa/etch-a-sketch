@@ -1,8 +1,16 @@
 // Create 16x16 squares
-
 const container = document.querySelector('.middle');
 
-let grid = 100
+// Add button for prompt grid
+const body = document.querySelector('body');
+const web = document.querySelector('.web');
+const btn = document.createElement('button');
+    btn.classList.add('resize');
+    btn.textContent = "Grid Size";
+    btn.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 40px;');
+    body.insertBefore(btn, web);
+
+let grid = 16
 
 let divs = []
 for(n = 1; n <= grid; n++) {
@@ -27,11 +35,25 @@ sketch.forEach(square => square.addEventListener("mouseover", (event) => {
 const test = document.querySelectorAll('.square');
 test.forEach(square => square.setAttribute('style', `padding: ${(800-grid)/grid}px;`));
 
-// Add button for prompt grid
-const body = document.querySelector('body');
-const web = document.querySelector('.web');
-const btn = document.createElement('button');
-    btn.classList.add('resize');
-    btn.textContent = "Grid Size";
-    btn.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 40px;');
-    body.insertBefore(btn, web);
+
+// Resize Grid
+btn.addEventListener('click', () => {
+    gridResize();
+});
+
+function gridResize() {
+let num = +(prompt("What size do you want the width and length?", 16))
+let heads = []
+for(g = 1; g <= num; g++) {
+    heads[g] = document.createElement('div');
+    heads[g].classList.add(`head${g}`, 'divs');
+    container.appendChild(heads[g]);
+
+        let squares = [];
+        for(let m = 1; m <= num; m++) {
+            squares[m] = document.createElement('div');
+            squares[m].classList.add(`row${g}col${m}`, 'square');
+            heads[g].appendChild(squares[m]);}}
+
+test.forEach(square => square.setAttribute('style', `padding: ${(800-num)/num}px;`));
+}
