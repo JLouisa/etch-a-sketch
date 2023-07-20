@@ -25,4 +25,13 @@ sketch.forEach(square => square.addEventListener("mouseover", (event) => {
 
 // Adjust Padding for square
 const test = document.querySelectorAll('.square');
-test.forEach(square => square.setAttribute('style', `padding: ${800/grid}px;`));
+test.forEach(square => square.setAttribute('style', `padding: ${(800-grid)/grid}px;`));
+
+// Add button for prompt grid
+const body = document.querySelector('body');
+const web = document.querySelector('.web');
+const btn = document.createElement('button');
+    btn.classList.add('resize');
+    btn.textContent = "Grid Size";
+    btn.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 40px;');
+    body.insertBefore(btn, web);

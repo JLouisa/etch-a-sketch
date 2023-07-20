@@ -17,6 +17,7 @@ h1 {
 
 .left, .right {
     flex: auto;
+    flex-direction: column;
     flex-shrink: 1;
     border: 2px solid blue;
 }
