@@ -10,7 +10,7 @@ const btn = document.createElement('button');
     btn.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 40px;');
     body.insertBefore(btn, web);
 
-let grid = 2
+let grid = 16;
 
 let divs = []
 for(n = 1; n <= grid; n++) {
@@ -36,8 +36,8 @@ const test = document.querySelectorAll('.square');
 test.forEach(square => square.setAttribute('style', `padding: ${(800-grid)/grid}px;`));
 
 //Click Button
-btn.addEventListener('click', () => {
-    alert("Nice isn't it?");
+btn.addEventListener('click', (grid2) => {
+    grid2 = +(prompt("What's the new size?", 75));
     let web = document.querySelector('.web');
         middle = document.querySelector('.middle');
         web.removeChild(middle);
@@ -45,9 +45,7 @@ btn.addEventListener('click', () => {
     let right = document.querySelector('.right');
         middle2.classList.add('middle', 'side');
         web.insertBefore(middle2, right);
+
+//Create new grid
+
 });
-
-
-//instead of removing individual elements, why not remove the whole parentnode and readd it.
-
-// row1col1 square
