@@ -1,16 +1,44 @@
+.web {
+    display: flex;
+}
+
 h1 {
     color: purple;
     font-size: 100px;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 30px;
+}
+
+.side {
+    display: flex;
+    border: 2px solid red;
+}
+
+.left, .right {
+    flex: auto;
+    flex-shrink: 1;
+    border: 2px solid blue;
 }
 
 .middle {
-    display: flex;
+    flex-basis: 960px;
+    flex-grow: 1;
+    flex-shrink: 0;
     justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    border: 2px solid gold;
 }
 
 .square {
-    border: 2px solid black;
-    padding: 50px;
+    display: flex;
+    border: 1px solid black;
+    margin: auto;
+    padding: 20px;
 }
+
+/* .square:hover {
+    transition: all .07s ease;
+    background-color: rgb(3, 197, 90);
+  } */
