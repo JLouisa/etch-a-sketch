@@ -38,12 +38,15 @@ test.forEach(square => square.setAttribute('style', `padding: ${(800-grid)/grid}
 //Click Button
 btn.addEventListener('click', () => {
     alert("Nice isn't it?");
+    let web = document.querySelector('.web');
+        middle = document.querySelector('.middle');
+        web.removeChild(middle);
+    let middle2 = document.createElement('section');
+    let right = document.querySelector('.right');
+        middle2.classList.add('middle', 'side');
+        web.insertBefore(middle2, right);
+});
 
-    for(l = 1; l <= grid; l++) {
-    head[l] = document.querySelector(`.head${l}`);
-    square = document.querySelectorAll('.square');
-    square.forEach(square => head[l].removeChild(square))
-}});
 
 //instead of removing individual elements, why not remove the whole parentnode and readd it.
 
