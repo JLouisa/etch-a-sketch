@@ -40,3 +40,10 @@ h1 {
     transition: all .07s ease;
     background-color: rgb(3, 197, 90);
   } */
+
+  .btnContainer {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    gap: 40px;
+  }

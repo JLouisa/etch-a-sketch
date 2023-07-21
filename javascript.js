@@ -1,6 +1,10 @@
 // Create 16x16 squares
 const container = document.querySelector('.middle');
 
+//Add button container
+const btnContainer = document.createElement('div');
+    btnContainer.classList.add('btnContainer');
+
 // Add button for prompt grid
 const body = document.querySelector('body');
 const web = document.querySelector('.web');
@@ -8,7 +12,8 @@ const btn = document.createElement('button');
     btn.classList.add('resize');
     btn.textContent = "Grid Resize";
     btn.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 35px;');
-    body.insertBefore(btn, web);
+    body.insertBefore(btnContainer, web);
+    btnContainer.appendChild(btn);
 
 let grid = 16;
 
@@ -82,3 +87,25 @@ function rgb() {
     let calcRGB2 = calcRGB.toFixed(0);
     return calcRGB2;
 }
+
+
+//Multiple buttons for colors
+const btnBlack = document.createElement('button');
+    btnBlack.classList.add('black');
+    btnBlack.textContent = "Black Color";
+    btnBlack.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 35px;');
+    btnContainer.appendChild(btnBlack);
+
+const btnRGB = document.createElement('button');
+    btnRGB.classList.add('rbg');
+    btnRGB.textContent = "RGB Colors";
+    btnRGB.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 35px;');
+    btnContainer.appendChild(btnRGB);
+
+const btnDarken = document.createElement('button');
+    btnDarken.classList.add('darkened');
+    btnDarken.textContent = "Darkened Color";
+    btnDarken.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 35px;');
+    btnContainer.appendChild(btnDarken);
+
+
