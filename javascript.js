@@ -31,9 +31,9 @@ for(n = 1; n <= grid; n++) {
 }
 
 // Create hover effect
-const sketch = document.querySelectorAll('.square');
-sketch.forEach(square => square.addEventListener("mouseover", (event) => {
-    event.target.style.backgroundColor = `rgb(${rgb()},${rgb()}, ${rgb()})`;}
+const greenColor = document.querySelectorAll('.square');
+greenColor.forEach(square => square.addEventListener("mouseover", (event) => {
+    event.target.style.backgroundColor = `green`;}
   ));
 
 // Adjust Padding for square
@@ -72,12 +72,12 @@ for(n2 = 1; n2 <= grid2; n2++) {
 // Create hover effect
 const sketch2 = document.querySelectorAll('.square');
 sketch2.forEach(square => square.addEventListener("mouseover", (event) => {
-    event.target.style.backgroundColor = `rgb(${rgb()},${rgb()}, ${rgb()})`;}
+    event.target.style.backgroundColor = 'green';}
   ));
 
 // Adjust Padding for square
-const test2 = document.querySelectorAll('.square');
-test2.forEach(square => square.setAttribute('style', `padding: ${(800-grid2)/grid2}px;`));
+const squareSize = document.querySelectorAll('.square');
+squareSize.forEach(square => square.setAttribute('style', `padding: ${(800-grid2)/grid2}px;`));
 
 });
 
@@ -96,16 +96,23 @@ const btnBlack = document.createElement('button');
     btnBlack.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 35px;');
     btnContainer.appendChild(btnBlack);
 
+    const squareBlack = document.querySelectorAll('.square');
+    btnBlack.addEventListener('click', () => {
+        squareBlack.forEach(square => square.addEventListener("mouseover", (event2) => {
+            event2.target.style.backgroundColor = `rgba(0, 0, 0, 0.900)`;}
+          ));
+    })
+
 const btnRGB = document.createElement('button');
     btnRGB.classList.add('rbg');
     btnRGB.textContent = "RGB Colors";
     btnRGB.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 35px;');
     btnContainer.appendChild(btnRGB);
 
-const btnDarken = document.createElement('button');
-    btnDarken.classList.add('darkened');
-    btnDarken.textContent = "Darkened Color";
-    btnDarken.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 35px;');
-    btnContainer.appendChild(btnDarken);
+    const rgbColor = document.querySelectorAll('.square');
+    btnRGB.addEventListener('click', () => {
+        rgbColor.forEach(square => square.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = `rgb(${rgb()},${rgb()}, ${rgb()})`;}
+    ))});
 
 
