@@ -38,7 +38,7 @@ greenColor.forEach(square => square.addEventListener("mouseover", (event) => {
 
 // Adjust Padding for square
 const test = document.querySelectorAll('.square');
-test.forEach(square => square.setAttribute('style', `padding: ${(800-grid)/grid}px;`));
+test.forEach(square => square.setAttribute('style', `padding: ${(400-grid)/grid}px;`));
 
 //Click Button
 btn.addEventListener('click', (grid2) => {
@@ -96,7 +96,7 @@ const greenColor2 = document.querySelectorAll('.square');
 
 // Adjust Padding for square
 const squareSize = document.querySelectorAll('.square');
-squareSize.forEach(square => square.setAttribute('style', `padding: ${(800-grid2)/grid2}px;`));
+squareSize.forEach(square => square.setAttribute('style', `padding: ${(400-grid2)/grid2}px;`));
 
 });
 
