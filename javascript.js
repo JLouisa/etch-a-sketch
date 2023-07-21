@@ -33,7 +33,7 @@ for(n = 1; n <= grid; n++) {
 // Create hover effect
 const greenColor = document.querySelectorAll('.square');
 greenColor.forEach(square => square.addEventListener("mouseover", (event) => {
-    event.target.style.backgroundColor = `green`;}
+    event.target.style.backgroundColor = 'green';}
   ));
 
 // Adjust Padding for square
@@ -115,4 +115,13 @@ const btnRGB = document.createElement('button');
         event.target.style.backgroundColor = `rgb(${rgb()},${rgb()}, ${rgb()})`;}
     ))});
 
+const btnGreen = document.createElement('button');
+    btnGreen.classList.add('green');
+    btnGreen.textContent = "Green Color";
+    btnGreen.setAttribute('style', 'padding: 10px; font-size: 20px; margin-left: 35px;');
+    btnContainer.appendChild(btnGreen);
 
+    btnGreen.addEventListener('click', () => {
+        greenColor.forEach(square => square.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = 'green';}
+      ))});
