@@ -75,6 +75,25 @@ sketch2.forEach(square => square.addEventListener("mouseover", (event) => {
     event.target.style.backgroundColor = 'green';}
   ));
 
+const squareBlack2 = document.querySelectorAll('.square');
+    btnBlack.addEventListener('click', () => {
+        squareBlack2.forEach(square => square.addEventListener("mouseover", (event2) => {
+            event2.target.style.backgroundColor = `rgba(0, 0, 0, 0.900)`;}
+          ));
+    })
+
+const rgbColor2 = document.querySelectorAll('.square');
+    btnRGB.addEventListener('click', () => {
+        rgbColor2.forEach(square => square.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = `rgb(${rgb()},${rgb()}, ${rgb()})`;}
+    ))});
+
+const greenColor2 = document.querySelectorAll('.square');
+    btnGreen.addEventListener('click', () => {
+        greenColor2.forEach(square => square.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = 'green';}
+      ))});
+
 // Adjust Padding for square
 const squareSize = document.querySelectorAll('.square');
 squareSize.forEach(square => square.setAttribute('style', `padding: ${(800-grid2)/grid2}px;`));
